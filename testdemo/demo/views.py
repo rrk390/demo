@@ -21,7 +21,6 @@ class show_user(APIView):
         form = UserForm(request.POST)
         if form.is_valid:
             user_id = request.POST.get('user_info')
-            projects = TaskInfo.objects.filter(id=user_id).values()
-            print('projects --> ', projects)
-            return render(request, self.temp, {'projects': projects})
+            db_data = TaskInfo.objects.filter(id=user_id).values()
+            return render(request, self.temp, {'db_data': db_data})
 
