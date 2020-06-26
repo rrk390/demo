@@ -1,0 +1,11 @@
+{% block content %}
+    <h2>Data based on User input</h2>
+    <form action="{% url 'user_task' %}" method="POST">
+    {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit"/> 
+    </form>
+{% endblock %}
+
+
+
