@@ -1,5 +1,5 @@
 {% for key, value in db_data.0.items %}
-    {% if value == True %} 
+    {% if value is True %} 
         <li>{{ key }}</li>
     {% endif%}      
 {% endfor %}    
