@@ -1,0 +1,10 @@
+# SQLlite database
+db.sqlite3
+
+# migrations files
+#*/migrations/*
+!*/migrations/__init__.py
+migrations/
+
+# pycache
+__pycache__/
